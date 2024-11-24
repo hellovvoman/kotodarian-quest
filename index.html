@@ -141,4 +141,17 @@
 
         function checkAnswer(questionNumber, userAnswer) {
             if (userAnswer === correctAnswers[questionNumber]) {
-                alert('
+                alert('Ответ правильный!');
+                if (questionNumber < 10) {
+                    document.getElementById(`question-${questionNumber}`).style.display = 'none';
+                    document.getElementById(`question-${questionNumber + 1}`).style.display = 'block';
+                } else {
+                    document.getElementById('result').style.display = 'block';
+                }
+            } else {
+                alert('Ответ неправильный. Попробуйте еще раз!');
+            }
+        }
+    </script>
+</body>
+</html>
